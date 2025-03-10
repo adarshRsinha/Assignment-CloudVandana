@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#taskInput:focus {
+    border-color: #6e8efb;
+}
+
+#addTaskBtn {
+    padding: 10px 15px;
+    background: #6e8efb;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#addTaskBtn:hover {
+    background: #5b75f2;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures long text wraps */
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 16px;
+    transition: 0.3s;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+.task-text {
+    flex: 1; /* Ensures text takes up available space */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-right: 10px; /* Adds space between text and button */
+}
+
+.removeBtn {
+    flex-shrink: 0; /* Prevents button from shrinking */
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.removeBtn:hover {
+    background: #e63939;
+}
